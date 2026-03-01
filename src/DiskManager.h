@@ -13,8 +13,8 @@ constexpr size_t PAGE_SIZE = 4096;
 
 class DiskManager {
 private:
-    std::fstream db_file;
-    std::string file_name;
+    std::fstream db_file_;
+    std::string file_name_;
 public:
     DiskManager(const std::string& file_name);
     ~DiskManager();
