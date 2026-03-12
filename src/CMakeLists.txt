@@ -1,6 +1,7 @@
 # Create a library that holds all our database logic
 add_library(DatabaseEngine STATIC
     DiskManager.cpp
+    Page.cpp
     # BTree.cpp  <-- Uncomment these as you add more files/folders
     # QueryParser.cpp
 )
