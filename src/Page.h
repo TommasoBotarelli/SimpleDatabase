@@ -1,3 +1,5 @@
+#pragma once
+
 #include <cstdint>
 #include <array>
 
@@ -6,9 +8,10 @@
 #include <optional>
 
 constexpr uint32_t INVALID_PAGE_ID = 0xFFFFFFFF;
+using page_id_t = uint32_t;
 
 struct PageHeader {
-    uint32_t page_id;
+    page_id_t page_id;
     uint16_t tuple_count;
     uint16_t free_space_pointer;
 };
@@ -25,4 +28,5 @@ class Page {
         Page();
         std::optional<uint16_t> add_row(std::span<const std::byte> row_data);
         PageHeader* get_header();
+        std::span<std::byte, PAGE_SIZE> get_data();
 };

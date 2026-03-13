@@ -53,3 +53,8 @@ PageHeader *Page::get_header()
 {
     return reinterpret_cast<PageHeader*>(data_.data());
 }
+
+std::span<std::byte, PAGE_SIZE> Page::get_data()
+{
+    return data_;
+}
