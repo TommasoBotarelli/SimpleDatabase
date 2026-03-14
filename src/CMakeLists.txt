@@ -2,6 +2,7 @@
 add_library(DatabaseEngine STATIC
     DiskManager.cpp
     Page.cpp
+    BufferPoolManager.cpp
     # BTree.cpp  <-- Uncomment these as you add more files/folders
     # QueryParser.cpp
 )

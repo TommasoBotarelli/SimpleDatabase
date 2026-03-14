@@ -10,6 +10,7 @@ FetchContent_MakeAvailable(googletest)
 add_executable(unit_tests 
     DiskManagerTest.cpp
     PageTest.cpp
+    BufferPoolManagerTest.cpp
     # BTreeTest.cpp <-- Add more test files here as you go
 )
 
